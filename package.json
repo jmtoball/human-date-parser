@@ -1,0 +1,16 @@
+{
+  "name": "human-date",
+  "version": "0.0.1",
+  "description": "Parses dates given by humans.",
+  "main": "human-date.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "author": "Johannes Maximilian Toball",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "mocha": "^2.2.5",
+    "moment": "^2.10.3"
+  }
+}
