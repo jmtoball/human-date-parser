@@ -1,0 +1,31 @@
+{
+  "parseDate": {
+    "tomorrow": { "relative": {"days": 1} },
+    "the day after tomorrow": { "relative": {"days": 2} },
+    "yesterday": { "relative": {"days": -1} },
+    "the day before yesterday": { "relative": {"days": -2} },
+    "next year": { "relative": {"years": 1} },
+    "last year": { "relative": {"years": -1} },
+
+    "next friday": { "relative": {"days": 1} },
+    "last thursday": { "relative": {"days": -7} },
+    "last monday next week": { "relative": {"days": 4} },
+    "friday next week": { "relative": {"days": 8} },
+    "tomorrow next week": { "relative": {"days": 8} },
+    "friday last week": { "relative": {"days": -6} },
+    "the day before friday last week": { "relative": {"days": -7} },
+    "the day after friday last week": { "relative": {"days": -5} }
+  },
+  "parseTime": {
+    "noon": { "relative": {"days": 0}, "absolute": {"hours": 12} },
+    "midnight": { "relative": {"days": 1}, "absolute": {"hours": 0} }
+  },
+  "parse": {
+    "tomorrow at noon": { "relative": {"days": 1}, "absolute": {"hours": 12} },
+    "yesterday at noon": { "relative": {"days": -1}, "absolute": {"hours": 12} },
+    "tomorrow at midnight": { "relative": {"days": 2}, "absolute": {"hours": 0} },
+    "yesterday at midnight": { "relative": {"days": 0}, "absolute": {"hours": 0} },
+    "tomorrow last year at midnight": { "relative": {"days": 2, "years": -1}, "absolute": {"hours": 0} },
+    "yesterday next year at 8:35": { "relative": {"days": -1, "years": 1}, "absolute": {"hours": 8, "minutes": 35} }
+  }
+}
