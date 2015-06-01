@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>human-date</title>
+    <link rel='stylesheet' type='text/css' href='http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.2/semantic.min.css'>
+    <script type='text/javascript' src='human-date.js'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js'></script>
+    <script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+      $(document).on("change keyup", "input", function () {
+        var input = $(this);
+        var value = input.val();
+        var output = HumanDate.parse(value);
+        var outputContainer = input.parent().siblings().first().find("input");
+        outputContainer.val(output.format("LLLL"))
+      });
+      $.getJSON("test/inputs.json", function (data) {
+        for (var key in data) {
+          var inputs = data[key];
+          for (input in inputs) {
+            var row = $("<div class='ui two column row'/>").appendTo("#examples");
+            var inputContainer = $("<div class='ui column'/>").appendTo(row);
+            var outputContainer = $("<div class='ui column'><input type='text' disabled='disabled'/></div>").appendTo(row);
+            var input = $("<input type='text' class='ui' value='" + input + "'/>");
+            input.appendTo(inputContainer).trigger("change");
+          }
+        }
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <form class='ui page grid form' id='examples'>
+      <div class='ui one column row'>
+        <div class='ui column'>
+          <h1 class='ui huge header'>human date</h1>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
