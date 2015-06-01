@@ -1,17 +1,17 @@
 {
-  "name": "human-date",
+  "name": "human-date-parser",
   "version": "0.0.1",
   "description": "Parses dates given by humans.",
-  "main": "human-date.js",
+  "main": "human-date-parser.js",
   "scripts": {
     "test": "make test"
   },
-  "repository": "github:jmtoball/human-date",
+  "repository": "github:jmtoball/human-date-parser",
   "author": "Johannes Maximilian Toball",
-  "homepage": "https://jmtoball.github.io/human-date",
+  "homepage": "https://jmtoball.github.io/human-date-parser",
   "license": "MIT",
   "bugs": {
-    "url" : "https://github.com/jmtoball/human-date/issues"
+    "url" : "https://github.com/jmtoball/human-date-parser/issues"
   },
   "devDependencies": {
     "chai": "^2.3.0",

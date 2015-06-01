@@ -1,6 +1,6 @@
 var expect = require('chai').expect,
     moment = require('moment'),
-    humanDate = require('../human-date.js'),
+    humanDate = require('../human-date-parser.js'),
     inputs = require('./inputs.json');
 
 var now = moment("2015-01-15T09");
