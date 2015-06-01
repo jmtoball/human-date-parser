@@ -6,8 +6,13 @@
   "scripts": {
     "test": "make test"
   },
+  "repository": "github:jmtoball/human-date",
   "author": "Johannes Maximilian Toball",
+  "homepage": "https://jmtoball.github.io/human-date",
   "license": "MIT",
+  "bugs": {
+    "url" : "https://github.com/jmtoball/human-date/issues"
+  },
   "devDependencies": {
     "chai": "^2.3.0",
     "mocha": "^2.2.5",
