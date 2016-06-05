@@ -7,8 +7,22 @@
     "next year": { "relative": {"years": 1} },
     "last year": { "relative": {"years": -1} },
 
+    "next monday": { "relative": {"days": 4} },
+    "next tuesday": { "relative": {"days": 5} },
+    "next wednesday": { "relative": {"days": 6} },
+    "next thursday": { "relative": {"days": 7} },
     "next friday": { "relative": {"days": 1} },
+    "next saturday": { "relative": {"days": 2} },
+    "next sunday": { "relative": {"days": 3} },
+
+    "last monday": { "relative": {"days": -3} },
+    "last tuesday": { "relative": {"days": -2} },
+    "last wednesday": { "relative": {"days": -1} },
     "last thursday": { "relative": {"days": -7} },
+    "last friday": { "relative": {"days": -6} },
+    "last saturday": { "relative": {"days": -5} },
+    "last sunday": { "relative": {"days": -4} },
+
     "last monday next week": { "relative": {"days": 4} },
     "friday next week": { "relative": {"days": 8} },
     "tomorrow next week": { "relative": {"days": 8} },

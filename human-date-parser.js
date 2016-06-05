@@ -22,24 +22,23 @@ if (typeof require === 'function') {
     },
 
     parseRelativeWeekDays: function (dateString, relativeTo) {
-      var weekDays = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
-      var currentIdx = relativeTo.day() - 1;
+      var weekDays = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
       var sign = 1;
       for (targetIdx = 0; targetIdx < weekDays.length; targetIdx++) {
+        var currentIdx = weekDays.indexOf(relativeTo.format('dddd').toLowerCase());
         var weekDay = weekDays[targetIdx];
-        if (dateString.match("last " + weekDay)) {
-          sign = -1;
-          weekDays = weekDays.reverse();
-        }
         if (dateString.match(weekDay)) {
-          var targetIdx = weekDays.indexOf(weekDay);
-          if (targetIdx == currentIdx) {
-            return sign * weekDays.length;
-          } else if (targetIdx > currentIdx) {
-            return sign * (targetIdx - currentIdx);
+          var diff = targetIdx - currentIdx;
+          if (dateString.match("last " + weekDay)) {
+            if (targetIdx >= currentIdx) {
+              return diff - 7;
+            }
           } else {
-            return sign * (weekDays.length - (targetIdx - currentIdx));
+            if (targetIdx <= currentIdx) {
+              return 7 + diff;
+            }
           }
+          return diff;
         }
       }
       return 0;
@@ -109,6 +108,8 @@ if (typeof require === 'function') {
         diff.minutes = parseInt(matchTime[2]) - relativeTo.minutes();
       } else if (dateString.match("noon")) {
         diff.hours = 12 - relativeTo.hours();
+        diff.minutes = 0 - relativeTo.minutes();
+        diff.seconds = 0 - relativeTo.seconds();
       } else if (dateString.match("midnight")) {
         diff.hours = 0 - relativeTo.hours();
         diff.minutes = 0 - relativeTo.minutes();
